@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="formstyle.css" />
+    <title>New Business</title>
+  </head>
+  <body>
+    <form>
+      <div class="myform">
+        <h1>New Business</h1>
+        <div class="container">
+          <label for="Name"> Name :</label>
+          <input
+            id="fname"
+            type="text"
+            placeholder="Enter your Name"
+            required
+          />
+        </div>
+        <div class="container">
+          <label for="Email"> Email :</label>
+          <input id="email" type="text" placeholder="xyz@gamil.com" required />
+        </div>
+        <div class="container">
+          <label for="Phone"> Phone :</label>
+          <input id="phone" type="text" maxlength="10" required />
+        </div>
+        <div class="container">
+          <label for="website"> website :</label>
+          <input
+            id="website"
+            type="text"
+            placeholder="Enter your website"
+            required
+          />
+        </div>
+        <div class="container">
+          <label for="contactname"> Contact Name :</label>
+          <input
+            id="contactname"
+            type="text"
+            placeholder="Enter Contact Name"
+            required
+          />
+        </div>
+
+        <div class="container">
+          <label for="contactphone"> Contact Phone :</label>
+          <input id="contactphone" type="text" maxlength="10" required />
+        </div>
+        <div class="container">
+          <label for="contactemail"> Contact Email :</label>
+          <input
+            id="contactemail"
+            type="text"
+            placeholder="xyz@gamil"
+            required
+          />
+        </div>
+        <div class="container">
+          <label for="Notes">Notes :</label>
+          <textarea id="notes" rows="5" cols="0%"></textarea>
+        </div>
+        <div class="container" id="businesstype">
+          <label for="Type">Type :</label>
+          <input type="radio" value="small Business" name="choise" />
+          <label for="small Business" class="small Business"
+            >Small Business</label
+          >
+          <input type="radio" value="Enterprise" name="choise" />
+          <label for="Enterprise" class="Enterprise">Enterprise</label>
+          <input type="radio" value="Entrepreneur" name="choise" />
+          <label for="Entrepreneur" class="Entrepreneur">Entrepreneur</label>
+        </div>
+        <div class="container">
+          <label for="Type">Category :</label>
+          <select multiple size="5" id="option">
+            <option type="select" name="category" value="Clothes">
+              Clothes
+            </option>
+            <option type="select" name="category" value="Toys">Toys</option>
+            <option type="select" name="category" value="Grocerie">
+              Groceries
+            </option>
+            <option type="select" name="category" value="Electronics">
+              Electronics
+            </option>
+            <option type="select" name="category" value="Digital">
+              Digital
+            </option>
+          </select>
+        </div>
+        <div class="container">
+          <label for="comissionPercentage"> Comission Percentage :</label>
+          <input id="comissionPercentage" type="number" required />
+        </div>
+        <div class="container">
+          <label for="Active From"> Active From :</label>
+          <input id="activeFrom" type="date" required />
+        </div>
+        <div class="container">
+          <label for="Logo"> Logo :</label>
+          <img
+            src="https://neilpatel.com/wp-content/uploads/2016/07/marketingtools.jpg"
+            alt="photo"
+            height="100"
+            width="100"
+          />
+        </div>
+        <div class="container">
+          <label for="Critical Account">Critical Account :</label>
+          <input type="checkbox" id="criticalAccount" value="yes" />To represent
+          whether the account is critical so that we can provide extra care in
+          case of any queries
+        </div>
+        <div class="container" id="Paymentoption">
+          <label for="Payment Options">Payment Options :</label>
+          <input
+            type="checkbox"
+            name="Payment Options"
+            value="Cash on Delievery"
+          />Cash on Delievery <input type="checkbox" value="UPI" />UPI
+          <input
+            type="checkbox"
+            name="Payment Options"
+            value="Card Payment"
+          />Card Payment
+        </div>
+        <div class="button">
+          <button
+            type="button"
+            id="myBtn"
+            onclick="session()"
+            class="btn btn-dark"
+          >
+            Submit
+          </button>
+          <button id="button" type="reset" onclick="resets()">Reset</button>
+        </div>
+      </div>
+    </form>
+
+    <div>
+      <table border="3" class="table" id="show">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>phone</th>
+            <th>website</th>
+            <th>contactname</th>
+            <th>contactphone</th>
+            <th>contactemail</th>
+            <th>Notes</th>
+            <th>Type</th>
+            <th>Category</th>
+            <th>Comission Percentage</th>
+            <th>Active From</th>
+            <th>Critical Account</th>
+            <th>Payment Options</th>
+            <th>Edit</th>
+            <th>Delete</th>
+          </tr>
+        </thead>
+        <tbody id="tableData"></tbody>
+      </table>
+    </div>
+    <script src="giigle.js"></script>
+  </body>
+</html>
